@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Certeza IPA, cerveza artesanal intensa, tropical y urbana. Descubre variedades, experiencias y packs para compartir.">
+    <meta name="theme-color" content="#ff4d00">
+    <meta property="og:title" content="CERTEZA IPA | Romper reglas sabe mejor">
+    <meta property="og:description" content="Cerveza artesanal intensa, tropical y urbana. Variedades, experiencias, pack mixto y Club Certeza.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1532634876-26909d0d4b2a?auto=format&amp;fit=crop&amp;q=85&amp;w=1200">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ff4d00'/%3E%3Cpath d='M4 41 60 35v20H4z' fill='%23ccff00'/%3E%3Ctext x='32' y='31' font-size='10' text-anchor='middle' font-family='Arial Black,Arial' fill='%23080808'%3ECERTEZA%3C/text%3E%3C/svg%3E">
+    <title>CERTEZA | Romper reglas sabe mejor</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+   
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Brewery",
+            "name": "Certeza IPA",
+            "description": "Cerveza artesanal IPA intensa, tropical y urbana.",
+            "servesCuisine": "Cerveza artesanal",
+            "areaServed": "Madrid",
+            "brand": {
+                "@type": "Brand",
+                "name": "Certeza"
+            }
+        }
+    </script>
+ </head>
+<body class="no-scroll">
+    <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+        <div class="age-box">
+            <div class="brand-mark" aria-hidden="true">CERTEZA</div>
+            <h2 class="display" id="ageTitle">¿Tienes 18 o más?</h2>
+            <p>Contenido exclusivo para mayores de edad legal. Disfruta con responsabilidad.</p>
+            <div class="age-actions">
+                <button class="btn btn-primary" id="acceptAge" type="button">
+                    <i data-lucide="check" class="icon" aria-hidden="true"></i>
+                    Sí, entrar
+                </button>
+                <button class="age-small" id="rejectAge" type="button">No, salir</button>
+            </div>
+            <div class="age-message" id="ageMessage">Gracias por cuidarte. Este sitio es solo para mayores de edad.</div>
+        </div>
+    </div>
+
+    <nav class="nav" aria-label="Principal">
+        <div class="container nav-inner">
+            <a class="brand" href="#inicio" aria-label="Certeza, volver al inicio">
+                <span class="brand-mark">CERTEZA</span>
+                <span class="brand-name display">Certeza</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#productos">Productos</a>
+                 <a href="#ritual">Ritual</a>
+                <a href="#experiencias">Experiencias</a>
+                <a href="#historia">Historia</a>
+                <a href="#club">Club</a>
+            </div>
+            <div class="nav-actions">
+                <a class="btn btn-primary" href="#shop">
+                    <i data-lucide="shopping-bag" class="icon" aria-hidden="true"></i>
+                    Comprar
+                </a>
+                <button class="btn menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobilePanel" aria-label="Abrir menú">
+                    <i data-lucide="menu" class="icon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-panel" id="mobilePanel">
+            <a href="#productos">Productos</a>
+            <a href="#perfil">Perfil</a>
+            <a href="#ritual">Ritual</a>
+            <a href="#experiencias">Experiencias</a>
+            <a href="#historia">Historia</a>
+            <a href="#club">Club</a>
+            <a href="#shop">Comprar</a>
+        </div>
+    </nav>
+
+    <main id="inicio">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <div class="hero-kicker">
+                        <i data-lucide="zap" class="icon" aria-hidden="true"></i>
+                        Nueva Cerveza · Madrid
+                    </div>
+                    <h1 class="hero-title display">
+                        La fiesta<br>
+                        <span class="text-outline">empieza</span><br>
+                        con certeza
+                    </h1>
+                    <p class="lead"> Certeza es una nueva cerveza artesanal que llega para romper reglas. 
+                        Intensa y diferente que sabe exactamente lo que es y no se disculpa por tener carácter.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#productos">
+                            <i data-lucide="beer" class="icon" aria-hidden="true"></i>
+                            Ver variedades
+                        </a>
+                        <a class="btn btn-acid" href="#shop">
+                            <i data-lucide="package-plus" class="icon" aria-hidden="true"></i>
+                            Crear pack
+                        </a>
+                    </div>
+                    <div class="hero-proof" aria-label="Datos de la cerveza">
+                        <div class="proof-pill">
+                            <strong data-count="6.2">0</strong>
+                            <span>% alcohol</span>
+                        </div>
+                        <div class="proof-pill">
+                            <strong data-count="45">0</strong>
+                            <span>IBU de carácter</span>
+                        </div>
+                        <div class="proof-pill">
+                            <strong data-count="3">0</strong>
+                            <span>lotes estrella</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-stage reveal" aria-label="Lata Certeza IPA">
+                    <div class="burst" aria-hidden="true"></div>
+                    <div class="can-wrap" data-tilt>
+                        <div class="can">
+                            <span class="can-band" aria-hidden="true"></span>
+                            <span class="can-band" aria-hidden="true"></span>
+                            <span class="foam" aria-hidden="true"></span>
+                            <span class="foam" aria-hidden="true"></span>
+                            <span class="foam" aria-hidden="true"></span>
+                            <div class="can-label">
+                                <small>Craft IPA</small>
+                                <strong>Certeza</strong>
+                                <span>Romper reglas sabe mejor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-card">
+                        <span>Nueva Cerveza</span>
+                        <strong>Cerveza 100% artesanal </strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Certeza  <b>+</b> Cerveza artesanal <b>+</b> Romper reglas sabe mejor <b>+</b> Disfruta con responsabilidad <b>+</b></span>
+                <span>Certeza  <b>+</b> Cerveza artesanal <b>+</b> Romper reglas sabe mejor <b>+</b> Disfruta con responsabilidad <b>+</b></span>
+            </div>
+        </div>
+
+        <section class="section products" id="productos">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <span class="eyebrow">
+                            <i data-lucide="beer" class="icon" aria-hidden="true"></i>
+                            Variedades
+                        </span>
+                        <h2 class="section-title display">Tres formas de tenerlo claro</h2>
+                    </div>
+                    <p class="lead">Una línea pensada para bares, festivales y neveras con personalidad: intensidad para abrir la noche, frescura para repetir y una versión sin alcohol para estar dentro del plan.</p>
+                </div>
+
+                <div class="product-grid">
+                    <article class="card product-card reveal" style="--product-bg:#ff4d00; --product-can:#ff4d00; --tilt:-7deg;">
+                        <div class="product-art">
+                            <span class="product-badge">Más intensa</span>
+                            <img src="img/Certeza.jpg" alt="Lata Certeza Original IPA" class="product-image" style="width: auto; height: 280px; object-fit: contain;">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="display">Original </h3>
+                            <p>Mango, pomelo y resina con final seco. Directa, aromática y lista para comida picante, hamburguesas o una mesa larga.</p>
+                            <div class="specs">
+                                <div class="spec"><strong>6.2</strong><span>% Alc.</span></div>
+                                <div class="spec"><strong>45</strong><span>IBU</span></div>
+                                <div class="spec"><strong>33</strong><span>cl</span></div>
+                            </div>
+                            <button class="btn btn-primary add-pack" type="button" data-pack="original">
+                                <i data-lucide="plus" class="icon" aria-hidden="true"></i>
+                                Añadir al pack
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="card product-card reveal" style="--product-bg:#ccff00; --product-can:#ccff00; --tilt:-3deg;">
+                        <div class="product-art">
+                            <span class="product-badge">Con limón</span>
+                            <img src="img/ww.png" alt="Lata Certeza Session Haze" class="product-image" style="width: auto; height: 280px; object-fit: contain;">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="display">Con limón</h3>
+                            <p>Ligera, cítrica y muy bebible. La respuesta cuando quieres sabor de con limón y con ritmo largo para no saturar el paladar.</p>
+                            <div class="specs">
+                                <div class="spec"><strong>4.4</strong><span>% Alc.</span></div>
+                                <div class="spec"><strong>28</strong><span>IBU</span></div>
+                                <div class="spec"><strong>33</strong><span>cl</span></div>
+                            </div>
+                            <button class="btn btn-primary add-pack" type="button" data-pack="session">
+                                <i data-lucide="plus" class="icon" aria-hidden="true"></i>
+                                Añadir al pack
+                            </button>
+                        </div>
+                    </article>
+
+                        <article class="card product-card reveal" style="--product-bg:#00d7ff; --product-can:#00d7ff; --tilt:5deg;">
+                        <div class="product-art">
+                            <span class="product-badge">Sin alcohol</span>
+                            <img src="img/Certeza0,0.jpg" alt="Lata Certeza Zero Loud sin alcohol" class="product-image" style="width: auto; height: 280px; object-fit: contain;">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="display">Cero alcohol</h3>
+                            <p>Aroma de lúpulo, cuerpo limpio y cero alcohol. Para conducir, madrugar o alargar el plan sin salirte del mood.</p>
+                            <div class="specs">
+                                <div class="spec"><strong>0.0</strong><span>% Alc.</span></div>
+                                <div class="spec"><strong>18</strong><span>IBU</span></div>
+                                <div class="spec"><strong>33</strong><span>cl</span></div>
+                            </div>
+                            <button class="btn btn-primary add-pack" type="button" data-pack="zero">
+                                <i data-lucide="plus" class="icon" aria-hidden="true"></i>
+                                Añadir al pack
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section ritual" id="ritual">
+            <div class="container ritual-grid">
+                <aside class="card sticky-note reveal">
+                    <span class="eyebrow">
+                        <i data-lucide="sparkles" class="icon" aria-hidden="true"></i>
+                        Ritual
+                    </span>
+                    <h2 class="section-title display">Fría y a disfru tar</h2>
+                    <p class="lead">La cerveza no vive solo en la lata. Vive en cómo se abre, con quién se sirve y qué historia queda después.</p>
+                    <div class="note-list">
+                        <div class="note-item"><i data-lucide="thermometer-snowflake" class="icon" aria-hidden="true"></i> Servir entre 5 y 7 °C.</div>
+                        <div class="note-item"><i data-lucide="utensils" class="icon" aria-hidden="true"></i> Va fuerte con tacos, ramen, pizza y parrilla.</div>
+                        <div class="note-item"><i data-lucide="music-2" class="icon" aria-hidden="true"></i> Mejor con música alta y vaso frío.</div>
+                    </div>
+                </aside>
+
+                <div class="timeline">
+                    <article class="card timeline-step reveal">
+                        <span class="step-number">01</span>
+                        <div>
+                            <h3 class="display">Aroma primero</h3>
+                            <p>Acerca el vaso antes del primer trago. La Original IPA abre con mango maduro, pomelo y una nota resinosa que anuncia el golpe de lúpulo.</p>
+                        </div>
+                    </article>
+                    <article class="card timeline-step reveal">
+                        <span class="step-number">02</span>
+                        <div>
+                            <h3 class="display">Amargor limpio</h3>
+                            <p>No busca quemar la lengua. Busca un final seco que refresca, limpia grasa y te deja con ganas del siguiente sorbo.</p>
+                        </div>
+                    </article>
+                    <article class="card timeline-step reveal">
+                        <span class="step-number">03</span>
+                        <div>
+                            <h3 class="display">Plan redondo</h3>
+                            <p>Certeza funciona como punto de encuentro: after office, terraza, previa, cena improvisada o festival con el vaso en alto.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section experiences" id="experiencias">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <span class="eyebrow">
+                            <i data-lucide="calendar-days" class="icon" aria-hidden="true"></i>
+                            Experiencias
+                        </span>
+                        <h2 class="section-title display">Donde la marca se bebe</h2>
+                    </div>
+                    <p class="lead">Activaciones pensadas para que la gente recuerde algo más que el sabor: música, comida, edición limitada y una estética que se reconoce desde lejos.</p>
+                </div>
+
+                <div class="experience-grid">
+                    <article class="experience-main reveal">
+                        <div class="experience-copy">
+                            <h3 class="display">Tap Takeover</h3>
+                            <p>Una noche de grifos invitados, DJ set y cata rápida para presentar lotes experimentales antes de que lleguen a tienda.</p>
+                        </div>
+                    </article>
+                    <div class="event-list">
+                        <article class="event-card reveal">
+                            <div class="event-date"><span>May</span><strong>24</strong></div>
+                            <div>
+                                <h3 class="display">Certeza x Mercado</h3>
+                                <p>Maridaje callejero con food trucks, lúpulos cítricos y edición Session Haze.</p>
+                            </div>
+                        </article>
+                        <article class="event-card reveal">
+                            <div class="event-date"><span>Jun</span><strong>08</strong></div>
+                            <div>
+                                <h3 class="display">Lote secreto</h3>
+                                <p>Cata a ciegas para votar el próximo lanzamiento de temporada.</p>
+                            </div>
+                        </article>
+                        <article class="event-card reveal">
+                            <div class="event-date"><span>Jul</span><strong>19</strong></div>
+                            <div>
+                                <h3 class="display">Festival Crew</h3>
+                                <p>Barra pop-up, merch y pack frío para socios del Club Certeza.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section story" id="historia">
+            <div class="container story-grid">
+                <div class="collage reveal">
+                    <figure class="photo-frame photo-main">
+                        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&amp;fit=crop&amp;q=85&amp;w=1000" alt="Grupo de amigos brindando en una mesa">
+                    </figure>
+                    <figure class="photo-frame photo-small">
+                        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&amp;fit=crop&amp;q=85&amp;w=700" alt="Ambiente de concierto y celebración">
+                    </figure>
+                    <div class="photo-tag">
+                        <strong>10K+</strong>
+                        <span>personas en la crew</span>
+                    </div>
+                </div>
+
+                <div class="story-copy reveal">
+                    <span class="eyebrow">
+                        <i data-lucide="flame" class="icon" aria-hidden="true"></i>
+                        Historia
+                    </span>
+                    <h2 class="section-title display">Nacimos para romper reglas</h2>
+                    <p><strong>Certeza</strong> nació de una idea simple: crear una cerveza que no pida permiso. Una IPA que sabe exactamente lo que es y no se disculpa por tener carácter.</p>
+                    <p>La marca vive entre el taller cervecero, el bar de barrio, el concierto pequeño y la mesa donde siempre aparece alguien más. No quiere parecer perfecta: quiere ser memorable.</p>
+                    <div class="brand-stats">
+                        <div class="stat-card"><strong data-count="50">0</strong><span>mil latas servidas</span></div>
+                        <div class="stat-card"><strong data-count="18">0</strong><span>bares aliados</span></div>
+                        <div class="stat-card"><strong data-count="7">0</strong><span>lotes piloto</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section club" id="club">
+            <div class="container club-grid">
+                <article class="card manifesto reveal">
+                    <h2 class="display">Manifiesto Certeza</h2>
+                    <ul class="manifesto-list">
+                        <li><i data-lucide="badge-check" class="icon" aria-hidden="true"></i> Menos pose, más sabor.</li>
+                        <li><i data-lucide="badge-check" class="icon" aria-hidden="true"></i> Si una lata entra al plan, tiene que levantarlo.</li>
+                        <li><i data-lucide="badge-check" class="icon" aria-hidden="true"></i> La cerveza artesanal también puede ser callejera.</li>
+                        <li><i data-lucide="badge-check" class="icon" aria-hidden="true"></i> Se comparte mejor de lo que se presume.</li>
+                    </ul>
+                </article>
+
+                <aside class="card club-card reveal">
+                    <div>
+                        <span class="eyebrow">
+                            <i data-lucide="ticket" class="icon" aria-hidden="true"></i>
+                            Club
+                        </span>
+                        <h3 class="display">Únete a la crew</h3>
+                        <p>Un apartado útil para la marca: fidelización, lanzamientos limitados, preventas y eventos con cupos reales.</p>
+                    </div>
+                    <div class="club-perks">
+                        <div class="perk"><i data-lucide="package-open" class="icon" aria-hidden="true"></i> Packs de lanzamiento antes que nadie.</div>
+                        <div class="perk"><i data-lucide="map-pin" class="icon" aria-hidden="true"></i> Invitaciones a tap takeovers.</div>
+                        <div class="perk"><i data-lucide="shirt" class="icon" aria-hidden="true"></i> Merch de temporada.</div>
+                    </div>
+                    <a class="btn btn-primary" href="#contacto">
+                        <i data-lucide="send" class="icon" aria-hidden="true"></i>
+                        Pedir acceso
+                    </a>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section shop" id="shop">
+            <div class="container shop-grid">
+                <div class="reveal">
+                    <span class="eyebrow">
+                        <i data-lucide="shopping-cart" class="icon" aria-hidden="true"></i>
+                        Tienda rápida
+                    </span>
+                    <h2 class="section-title display">Arma tu pack mixto</h2>
+                    <p class="lead">Funcionalidad lista para convertir interés en acción. El usuario puede combinar variedades, ver el total y enviar la selección como intención de compra.</p>
+                    <div class="stockists" aria-label="Puntos de venta sugeridos">
+                        <div class="stockist-card">
+                            <div><strong>Bar La Barra</strong><span>Lavapiés · Grifo invitado</span></div>
+                            <i data-lucide="map-pin" class="icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="stockist-card">
+                            <div><strong>Cerveza & Co</strong><span>Malasaña · Packs fríos</span></div>
+                            <i data-lucide="map-pin" class="icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="stockist-card">
+                            <div><strong>Mercado Norte</strong><span>Chamberí · Lotes limitados</span></div>
+                            <i data-lucide="map-pin" class="icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card pack-builder reveal" aria-live="polite">
+                    <h3 class="display">Pack mixer</h3>
+                    <div class="pack-row" data-row="original">
+                        <div class="pack-name">
+                            <span class="swatch" style="--swatch:#ff4d00"></span>
+                            <div><strong>Original </strong><span>3,90 € por lata</span></div>
+                        </div>
+                        <div class="stepper" aria-label="Cantidad Original IPA">
+                            <button type="button" data-step="minus" data-pack="original" aria-label="Restar Original IPA">−</button>
+                            <span data-value="original">2</span>
+                            <button type="button" data-step="plus" data-pack="original" aria-label="Sumar Original IPA">+</button>
+                        </div>
+                    </div>
+                    <div class="pack-row" data-row="session">
+                        <div class="pack-name">
+                            <span class="swatch" style="--swatch:#00d7ff"></span>
+                            <div><strong>Certeza 0,0 </strong><span>3,60 € por lata</span></div>
+                        </div>
+                        <div class="stepper" aria-label="Cantidad Certeza">
+                            <button type="button" data-step="minus" data-pack="session" aria-label="Restar Certeza">−</button>
+                            <span data-value="session">2</span>
+                            <button type="button" data-step="plus" data-pack="session" aria-label="Sumar Certeza">+</button>
+                        </div>
+                    </div>
+                    <div class="pack-row" data-row="zero">
+                        <div class="pack-name">
+                            <span class="swatch" style="--swatch:#ccff00"></span>
+                            <div><strong>Certeza con Limón</strong><span>3,40 € por lata</span></div>
+                        </div>
+                        <div class="stepper" aria-label="Cantidad Certeza con Limón">
+                            <button type="button" data-step="minus" data-pack="zero" aria-label="Restar Certeza con Limón">−</button>
+                            <span data-value="zero">2</span>
+                            <button type="button" data-step="plus" data-pack="zero" aria-label="Sumar Certeza con Limón">+</button>
+                        </div>
+                    </div>
+
+                    <div class="pack-summary">
+                        <div>
+                            <span id="packUnits">6 latas</span>
+                            <strong id="packTotal">21,80 €</strong>
+                        </div>
+                        <button class="btn btn-acid" type="button" id="reservePack">
+                            <i data-lucide="shopping-bag" class="icon" aria-hidden="true"></i>
+                            Reservar pack
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contacto">
+            <div class="container contact-grid">
+                <div class="reveal">
+                    <span class="eyebrow">
+                        <i data-lucide="message-square" class="icon" aria-hidden="true"></i>
+                        Contacto
+                    </span>
+                    <h2 class="section-title display">Hablemos cerveza</h2>
+                    <p class="lead">Para distribución, eventos, colaboraciones o prensa. Certeza puede vivir en una barra, en un festival o en una nevera que no acepta latas aburridas.</p>
+                </div>
+
+                <form class="card contact-form reveal" id="contactForm">
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="name">Nombre</label>
+                            <input id="name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder="hola@correo.com" required>
+                        </div>
+                        <div class="field">
+                            <label for="interest">Interés</label>
+                            <select id="interest" name="interest">
+                                <option>Compra / reserva</option>
+                                <option>Distribución</option>
+                                <option>Evento</option>
+                                <option>Club Certeza</option>
+                                <option>Prensa</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="city">Ciudad</label>
+                            <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Madrid">
+                        </div>
+                        <div class="field full">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" placeholder="Cuéntanos el plan"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit" style="margin-top:16px;">
+                        <i data-lucide="send" class="icon" aria-hidden="true"></i>
+                        Enviar mensaje
+                    </button>
+                    <div class="form-status" id="formStatus">Mensaje preparado. En una versión conectada, esto se enviaría al CRM de la marca.</div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© 2026 Certeza IPA · +18 · Disfruta con responsabilidad</p>
+            <div class="socials" aria-label="Redes sociales">
+                <a href="#" aria-label="Instagram"><i data-lucide="camera" class="icon" aria-hidden="true"></i></a>
+                <a href="#" aria-label="TikTok"><i data-lucide="music-2" class="icon" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Email"><i data-lucide="mail" class="icon" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="btn btn-primary back-top" id="backTop" type="button" aria-label="Volver arriba">
+        <i data-lucide="arrow-up" class="icon" aria-hidden="true"></i>
+    </button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
